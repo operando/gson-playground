@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+def defaultEncoding = 'UTF-8'
+defaultTasks 'run'
+
+[compileJava, compileTestJava]*.options*.encoding = defaultEncoding
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+mainClassName = 'gson.Main'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.8.0'
+}
