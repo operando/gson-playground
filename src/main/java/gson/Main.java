@@ -20,5 +20,8 @@ public class Main {
         System.out.println(jsonObjects.toString());
 
         jsonObjects.forEach(System.out::println);
+
+        Animal animal = new Cat();
+        System.out.println(gson.toJson(animal)); // {"name":"cat"}
     }
 }
